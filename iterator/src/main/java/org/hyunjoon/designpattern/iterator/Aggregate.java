@@ -1,5 +1,5 @@
-package main.java.org.hyunjoon.designpattern.iterator;
+package org.hyunjoon.designpattern.iterator;
 
 public interface Aggregate{
-    public abstract Iterator iterator;
+    public abstract Iterator iterator();
 }

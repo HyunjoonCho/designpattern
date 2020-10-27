@@ -1,4 +1,4 @@
-package main.java.org.hyunjoon.designpattern.iterator;
+package org.hyunjoon.designpattern.iterator;
 
 public interface Iterator{
     public abstract boolean hasNext();
