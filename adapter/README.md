@@ -1,6 +1,6 @@
-##Adapter  
+## Adapter  
 
-#####Components
+##### Components
 - Target  
 spec to fulfill / as interface or abstract class
 - Adaptee  
@@ -8,7 +8,7 @@ existing class / adapted to implement target
 - Adapter  
 make use of adaptee to create target
 
-#####Type
+##### Type
 - Class Adapter  
 implement interface by inheriting class
 
