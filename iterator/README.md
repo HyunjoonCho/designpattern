@@ -1,5 +1,6 @@
-##Iterator
+##Iterator  
 
+#####Components  
 - Iterator  
 define API to iterate through objects
   - next()  
