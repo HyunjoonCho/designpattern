@@ -8,28 +8,27 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
-public class FileProperties implements FileIO {
-    private Properties properties;
-
+public class FileProperties extends Properties implements FileIO {
     public FileProperties() {
-        properties = new Properties();
+        super();
     }
 
     public void readFromFile(String filename) throws IOException {
         InputStream inputStream = new FileInputStream(new File(filename));
-        properties.load(inputStream);
+        super.load(inputStream);
     }
 
     public void writeToFile(String filename) throws IOException {
         OutputStream outputStream = new FileOutputStream(new File(filename));
-        properties.store(outputStream, "Written by FileProperties\n");
+        super.store(outputStream, "Written by FileProperties");
+        outputStream.close();
     }
 
     public void setValue(String key, String value) {
-
+        super.setProperty(key, value);
     }
 
     public String getValue(String key) {
-        return null;
+        return super.getProperty(key);
     }
 }
