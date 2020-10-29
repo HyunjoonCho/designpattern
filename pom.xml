@@ -10,8 +10,9 @@
 
     <modules>
         <module>adapter</module>
-        <module>iterator</module>
         <module>commons</module>
+        <module>iterator</module>
+        <module>template</module>
     </modules>
 
     <properties>
