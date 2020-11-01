@@ -4,7 +4,7 @@
 
 - AbstractClass  
 implement template methods - which determine major function   
-declare abstract methods called by template method  
+declare abstract methods used by template method  
 
 - ConcreteClass  
 implement abstract methods so that template methods can actually work  
