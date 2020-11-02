@@ -13,5 +13,4 @@ make use of adaptee to create target
 implement interface by inheriting class
 
 - Object Adapter  
-has object as member since multiple inheritance is not allowed  
-also called Instance Adapter
+has object as member since multiple inheritance is not allowed also called Instance Adapter
