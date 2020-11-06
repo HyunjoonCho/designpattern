@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class IDCardTest {
     @Test
-    public void IDCardTest() {
+    public void idCardTest() {
         Factory factory = new IDCardFactory();
         Product card1 = factory.create("John", 111);
         Product card2 = factory.create("tlwpdus", 222);

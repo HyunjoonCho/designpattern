@@ -13,6 +13,10 @@
         <module>commons</module>
         <module>iterator</module>
         <module>template</module>
+        <module>factory</module>
+        <module>singleton</module>
+        <module>prototype</module>
+        <module>builder</module>
     </modules>
 
     <properties>

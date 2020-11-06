@@ -7,7 +7,7 @@ public class ClassAdapterTest {
     // Print not PrintBanner which might have its own methods - out of Target spec
 
     @Test
-    public void PrintBannerTest(){
+    public void printBannerTest(){
         print = new PrintBanner("hello class");
         print.printWeak();
         print.printStrong();

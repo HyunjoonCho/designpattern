@@ -1,0 +1,5 @@
+#Written by FileProperties
+#Fri Nov 06 23:23:06 KST 2020
+day=15
+year=1999
+month=7

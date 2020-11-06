@@ -6,7 +6,7 @@ public class ObjectAdapterTest {
     private Print print;
 
     @Test
-    public void PrintBannerTest(){
+    public void printBannerTest(){
         print = new PrintBanner("hello object");
         print.printWeak();
         print.printStrong();

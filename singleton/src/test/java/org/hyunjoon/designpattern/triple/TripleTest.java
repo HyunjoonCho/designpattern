@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TripleTest {
     @Test
-    public void TripleTest() {
+    public void tripleTest() {
         Triple triple1 = Triple.getInstance(1);
         Triple triple2 = Triple.getInstance(2);
         Triple triple3 = Triple.getInstance(1);

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class PrototypeTest {
     @Test
-    public void PrototypeTest() {
+    public void prototypeTest() {
         Manager manager = new Manager();
         Product msgProto = new MessageBox('*');
         Product ulProto = new UnderlinePen('_');

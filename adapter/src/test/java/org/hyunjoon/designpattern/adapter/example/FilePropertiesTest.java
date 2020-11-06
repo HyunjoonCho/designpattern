@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class FilePropertiesTest {
     @Test
-    public void FilePropertiesTest() {
+    public void filePropertiesTest() {
         FileIO fileIO = new FileProperties();
         try {
             fileIO.readFromFile("/Users/user/study/designpattern/adapter/src/test/java/org/hyunjoon/designpattern/adapter/example/file.txt");

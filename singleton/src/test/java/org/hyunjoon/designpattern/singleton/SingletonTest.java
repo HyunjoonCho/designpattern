@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SingletonTest {
     @Test
-    public void SingletonTest() {
+    public void singletonTest() {
         Singleton singleton1 = Singleton.getInstance();
         Singleton singleton2 = Singleton.getInstance();
         Assert.assertEquals(singleton1, singleton2);
