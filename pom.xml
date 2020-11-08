@@ -17,6 +17,7 @@
         <module>singleton</module>
         <module>prototype</module>
         <module>builder</module>
+        <module>abstract-factory</module>
     </modules>
 
     <properties>
