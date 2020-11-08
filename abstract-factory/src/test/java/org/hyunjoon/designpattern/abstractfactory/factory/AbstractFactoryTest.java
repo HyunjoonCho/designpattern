@@ -17,6 +17,20 @@ public class AbstractFactoryTest {
         abstracyFactoryTester(tableFactory, tableTitle);
     }
 
+    @Test
+    public void naverListFactoryTest() {
+        String listFactory = "org.hyunjoon.designpattern.abstractfactory.listfactory.ListFactory";
+        Factory factory = Factory.getFactory(listFactory);
+        factory.createNaverPage().output();
+    }
+
+    @Test
+    public void naverTableFactoryTest() {
+        String tableFactory = "org.hyunjoon.designpattern.abstractfactory.tablefactory.TableFactory";
+        Factory factory = Factory.getFactory(tableFactory);
+        factory.createNaverPage().output();
+    }
+
     public void abstracyFactoryTester(String className, String pageTitle) {
         Factory factory = Factory.getFactory(className);
 

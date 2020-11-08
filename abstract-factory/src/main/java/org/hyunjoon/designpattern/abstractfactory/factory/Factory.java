@@ -18,4 +18,12 @@ public abstract class Factory {
     public abstract Link createLink(String caption, String url);
     public abstract Tray createTray(String caption);
     public abstract Page createPage(String title, String author);
+
+    public Page createNaverPage() {
+        Link link = createLink("Naver", "http://www.naver.com");
+        Page page = createPage("Naver", "Naver");
+        page.add(link);
+
+        return page;
+    }
 }
