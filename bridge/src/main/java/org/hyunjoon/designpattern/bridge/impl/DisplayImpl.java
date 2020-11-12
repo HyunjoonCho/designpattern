@@ -1,4 +1,4 @@
-package org.hyunjoon.designpattern.bridge;
+package org.hyunjoon.designpattern.bridge.impl;
 
 public abstract class DisplayImpl {
     public abstract void rawOpen();

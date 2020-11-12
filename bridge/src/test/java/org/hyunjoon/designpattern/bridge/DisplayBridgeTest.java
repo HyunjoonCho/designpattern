@@ -1,5 +1,10 @@
 package org.hyunjoon.designpattern.bridge;
 
+import org.hyunjoon.designpattern.bridge.function.CountDisplay;
+import org.hyunjoon.designpattern.bridge.function.Display;
+import org.hyunjoon.designpattern.bridge.function.RandomDisplay;
+import org.hyunjoon.designpattern.bridge.impl.StringDisplayImpl;
+import org.hyunjoon.designpattern.bridge.impl.TextDisplayImpl;
 import org.junit.Test;
 
 public class DisplayBridgeTest {

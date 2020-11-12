@@ -1,4 +1,6 @@
-package org.hyunjoon.designpattern.bridge;
+package org.hyunjoon.designpattern.bridge.impl;
+
+import org.hyunjoon.designpattern.bridge.impl.DisplayImpl;
 
 import java.io.File;
 import java.io.FileNotFoundException;

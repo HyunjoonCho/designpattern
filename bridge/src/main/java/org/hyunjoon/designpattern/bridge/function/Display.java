@@ -1,4 +1,6 @@
-package org.hyunjoon.designpattern.bridge;
+package org.hyunjoon.designpattern.bridge.function;
+
+import org.hyunjoon.designpattern.bridge.impl.DisplayImpl;
 
 public class Display {
     private final DisplayImpl impl;

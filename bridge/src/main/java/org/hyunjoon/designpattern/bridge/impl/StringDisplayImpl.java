@@ -1,4 +1,6 @@
-package org.hyunjoon.designpattern.bridge;
+package org.hyunjoon.designpattern.bridge.impl;
+
+import org.hyunjoon.designpattern.bridge.impl.DisplayImpl;
 
 public class StringDisplayImpl extends DisplayImpl {
     private final String string;

@@ -1,4 +1,7 @@
-package org.hyunjoon.designpattern.bridge;
+package org.hyunjoon.designpattern.bridge.function;
+
+import org.hyunjoon.designpattern.bridge.function.Display;
+import org.hyunjoon.designpattern.bridge.impl.DisplayImpl;
 
 public class RandomDisplay extends Display {
     public RandomDisplay(DisplayImpl impl) {
