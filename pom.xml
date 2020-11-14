@@ -20,6 +20,7 @@
         <module>abstract-factory</module>
         <module>bridge</module>
         <module>strategy</module>
+        <module>composite</module>
     </modules>
 
     <properties>
