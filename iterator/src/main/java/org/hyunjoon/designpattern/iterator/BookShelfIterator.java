@@ -5,6 +5,7 @@ public class BookShelfIterator implements Iterator {
     private int index;
 
     public BookShelfIterator(BookShelf bookShelf) {
+        // only called by BookShelf class, never gets null-parameter
         this.bookShelf = bookShelf;
         this.index = 0;
     }

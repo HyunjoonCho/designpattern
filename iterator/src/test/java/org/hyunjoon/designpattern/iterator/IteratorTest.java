@@ -21,9 +21,20 @@ public class IteratorTest {
         Iterator it = bookShelf.iterator();
         while (it.hasNext()) {
             Book book = (Book) it.next();
-            logger.info(book.getName());
+            logger.info(book.getTitle());
         }
         Assert.assertTrue(!it.hasNext());
+    }
+
+    @Test
+    public void addNullBook() {
+        BookShelf bookShelf = new BookShelf(3);
+        try {
+            bookShelf.appendBook(new Book(null));
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.assertEquals(e.getClass(), NullPointerException.class);
+        }
     }
 
     @Test
@@ -35,6 +46,6 @@ public class IteratorTest {
         bookShelf.appendBook(new Book("The Foundation of Love"));
 
         Assert.assertNotEquals(bookShelf.getLength(), 2);
-        Assert.assertEquals(bookShelf.getBookAt(2).getName(), "The Foundation of Love");
+        Assert.assertEquals(bookShelf.getBookAt(2).getTitle(), "The Foundation of Love");
     }
 }

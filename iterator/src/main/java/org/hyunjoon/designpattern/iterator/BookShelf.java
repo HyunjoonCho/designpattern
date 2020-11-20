@@ -7,7 +7,7 @@ public class BookShelf implements Aggregate {
     private int last = 0; // actually, not needed
 
     public BookShelf(int size) {
-        this.books = new ArrayList<Book>(size);
+        this.books = new ArrayList<>(size);
     }
 
     public Book getBookAt(int index) {

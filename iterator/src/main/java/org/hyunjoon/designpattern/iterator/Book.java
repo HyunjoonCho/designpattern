@@ -1,12 +1,13 @@
 package org.hyunjoon.designpattern.iterator;
 
+import java.util.Objects;
+
 public class Book{
-    private String name;
-    public Book(String name){
-        // if(name == null) throw exception
-        this.name = name;
+    private String title;
+    public Book(String title){
+        this.title = Objects.requireNonNull(title, "title");
     }
-    public String getName(){
-        return name;
+    public String getTitle(){
+        return title;
     }
 }
