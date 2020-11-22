@@ -21,6 +21,7 @@
         <module>bridge</module>
         <module>strategy</module>
         <module>composite</module>
+        <module>decorator</module>
     </modules>
 
     <properties>
