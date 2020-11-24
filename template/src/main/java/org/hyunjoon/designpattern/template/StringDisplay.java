@@ -1,11 +1,13 @@
 package org.hyunjoon.designpattern.template;
 
+import java.util.Objects;
+
 public class StringDisplay extends AbstractDisplay {
     private final String string;
     private final int length;
 
     public StringDisplay(String string) {
-        this.string = string;
+        this.string = Objects.requireNonNull(string, "string");
         length = string.length();
     }
 
