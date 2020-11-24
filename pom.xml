@@ -23,6 +23,7 @@
         <module>composite</module>
         <module>decorator</module>
         <module>visitor</module>
+        <module>chainofresponsibility</module>
     </modules>
 
     <properties>
