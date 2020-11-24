@@ -1,5 +1,6 @@
 package org.hyunjoon.designpattern.visitor.fs;
 
+import org.hyunjoon.designpattern.visitor.SizeVisitor;
 import org.hyunjoon.designpattern.visitor.Visitor;
 
 import java.util.ArrayList;
@@ -22,14 +23,10 @@ public class Directory extends Entry {
 
     @Override
     public int getSize() {
-        int size = 0;
-        Iterator it = dir.iterator();
+        SizeVisitor sizeVisitor = new SizeVisitor();
+        accept(sizeVisitor);
 
-        while (it.hasNext()) {
-            Entry entry = (Entry) it.next();
-            size += entry.getSize();
-        }
-        return size;
+        return sizeVisitor.getSize();
     }
 
     public Entry add(Entry entry) {

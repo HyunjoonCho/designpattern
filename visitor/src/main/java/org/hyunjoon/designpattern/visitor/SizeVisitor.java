@@ -6,26 +6,23 @@ import org.hyunjoon.designpattern.visitor.fs.File;
 
 import java.util.Iterator;
 
-public class ListVisitor extends Visitor{
-    private String currentDir = "";
+public class SizeVisitor extends Visitor {
+    private int size = 0;
 
     @Override
     public void visit(File file) {
-        System.out.println(currentDir + "/" + file);
+        size += file.getSize();
     }
 
     @Override
     public void visit(Directory directory) {
-        System.out.println(currentDir +  "/" + directory);
-
-        String saveDir = currentDir;
-        currentDir = currentDir + "/" + directory.getName();
-
         Iterator<Entry> it = directory.iterator();
         while (it.hasNext()) {
             it.next().accept(this);
         }
+    }
 
-        currentDir = saveDir;
+    public int getSize() {
+        return size;
     }
 }
