@@ -24,6 +24,7 @@
         <module>decorator</module>
         <module>visitor</module>
         <module>chainofresponsibility</module>
+        <module>facade</module>
     </modules>
 
     <properties>
