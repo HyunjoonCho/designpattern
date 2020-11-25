@@ -12,6 +12,6 @@ Questions
 >**Why do we use Interface, not the Class?**  
 
 You may use APIs from Interface under various circumstances e.g. change of DB, protocol  
-So, you'd better extract essential functions as API and hide details that user doesn't have to know - or should never know!  
+So, extract essential functions as API and hide details that user doesn't have to know - or should never know!  
 Also, read about [The Liskov Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)  
 
