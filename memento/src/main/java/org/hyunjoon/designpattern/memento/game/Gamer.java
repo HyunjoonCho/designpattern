@@ -65,6 +65,6 @@ public class Gamer {
 
     @Override
     public String toString() {
-        return "[money =" + money + ", fruits = " + fruits + "]";
+        return "[money = " + money + ", fruits = " + fruits + "]";
     }
 }
