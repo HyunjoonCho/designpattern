@@ -16,3 +16,4 @@ can only use narrow interface of Memento
 - wide and narrow refer to Authority i.e. how much operation you can make on Memento  
 - how many Mementos will you store? how long will you keep them in memory?  
 - Caretaker determines when to save and when to restore  
+- why constant, not variable? keep value the same and it does help in the same context - maintenance and reusability  

@@ -6,12 +6,15 @@ import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 public class MementoTest {
+    public static final String SAVE_FILE= "game.dat";
+
     @Test
     public void mementoTest() {
         Gamer gamer = new Gamer(100);
@@ -43,12 +46,14 @@ public class MementoTest {
     @Test
     public void serializableMementoTest() {
         Gamer gamer = new Gamer(100);
-        Memento memento = gamer.createMemento();
+        Memento memento;
         try {
-            ObjectInput objectInput = new ObjectInputStream(new FileInputStream("game.dat"));
+            ObjectInput objectInput = new ObjectInputStream(new FileInputStream(SAVE_FILE));
             memento = (Memento) objectInput.readObject();
             gamer.restoreMemento(memento);
         } catch (Exception e) {
+            // three possible exceptions -> FileNotFound, IO, ClassNotFound
+            memento = gamer.createMemento();
         }
 
         for (int i = 0; i < 10; i++) {
@@ -63,9 +68,10 @@ public class MementoTest {
                 System.out.println(" (save since money increased)");
                 memento = gamer.createMemento();
                 try {
-                    ObjectOutput objectOutput = new ObjectOutputStream(new FileOutputStream("game.dat"));
+                    ObjectOutput objectOutput = new ObjectOutputStream(new FileOutputStream(SAVE_FILE));
                     objectOutput.writeObject(memento);
-                } catch (Exception e){
+                } catch (IOException e){
+                    e.printStackTrace();
                 }
 
             } else if (gamer.getMoney() < memento.getMoney()){
