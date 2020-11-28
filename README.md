@@ -1,5 +1,5 @@
 # Design Pattern
-Java 언어로 배우는 디자인 패턴 입문 - Yuki Hiroshi  
+Java 언어로 배우는 디자인 패턴 입문 - Yuki Hiroshi (http://hyuki.com/dp/)  
 Manage modules and test efficiently with maven  
 
 Goal  
