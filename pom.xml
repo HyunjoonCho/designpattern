@@ -29,6 +29,7 @@
         <module>observer</module>
         <module>memento</module>
         <module>state</module>
+        <module>flyweight</module>
     </modules>
 
     <properties>
