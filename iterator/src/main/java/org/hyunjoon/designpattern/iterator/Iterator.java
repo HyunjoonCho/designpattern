@@ -1,6 +1,6 @@
 package org.hyunjoon.designpattern.iterator;
 
 public interface Iterator{
-    public abstract boolean hasNext();
-    public abstract Object next();
+    public boolean hasNext();
+    public Object next();
 }
