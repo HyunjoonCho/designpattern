@@ -1,10 +1,10 @@
-package org.hyunjoon.designpattern.interpreter;
+package org.hyunjoon.designpattern.interpreter.parser;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CommandListNode extends Node {
-    List<Node> nodeList = new ArrayList<>();
+    private List<Node> nodeList = new ArrayList<>();
 
     @Override
     public void parse(Context context) throws ParseException {
@@ -19,6 +19,13 @@ public class CommandListNode extends Node {
                 commandNode.parse(context);
                 nodeList.add(commandNode);
             }
+        }
+    }
+
+    @Override
+    public void draw() {
+        for (Node node : nodeList) {
+            node.draw();
         }
     }
 

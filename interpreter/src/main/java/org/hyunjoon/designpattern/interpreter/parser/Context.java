@@ -1,14 +1,22 @@
-package org.hyunjoon.designpattern.interpreter;
+package org.hyunjoon.designpattern.interpreter.parser;
+
+import org.hyunjoon.designpattern.interpreter.visualizer.SimpleLanguageCanvas;
 
 import java.util.StringTokenizer;
 
 public class Context {
     private StringTokenizer tokenizer;
     private String currentToken;
+    private SimpleLanguageCanvas canvas;
 
     public Context(String text) {
         tokenizer = new StringTokenizer(text);
         nextToken();
+    }
+
+    public Context(String text, SimpleLanguageCanvas canvas) {
+        this(text);
+        this.canvas = canvas;
     }
 
     public String nextToken() {
@@ -29,6 +37,10 @@ public class Context {
             throw new ParseException("Warning: " + token + " is expected, but " + currentToken + " is found.");
         }
         nextToken();
+    }
+
+    public SimpleLanguageCanvas getCanvas() {
+        return canvas;
     }
 
     public int currentNumber() throws ParseException {

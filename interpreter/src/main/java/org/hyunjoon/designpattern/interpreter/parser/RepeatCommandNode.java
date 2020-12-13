@@ -1,4 +1,4 @@
-package org.hyunjoon.designpattern.interpreter;
+package org.hyunjoon.designpattern.interpreter.parser;
 
 public class RepeatCommandNode extends Node {
     private int number;
@@ -11,6 +11,13 @@ public class RepeatCommandNode extends Node {
         context.nextToken();
         commandListNode = new CommandListNode();
         commandListNode.parse(context);
+    }
+
+    @Override
+    public void draw() {
+        for (int i = 0; i < number; i++) {
+            commandListNode.draw();
+        }
     }
 
     @Override

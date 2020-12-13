@@ -1,4 +1,4 @@
-package org.hyunjoon.designpattern.interpreter;
+package org.hyunjoon.designpattern.interpreter.parser;
 
 public class ProgramNode extends Node {
     private Node commandListNode;
@@ -8,6 +8,11 @@ public class ProgramNode extends Node {
         context.skipToken("program");
         commandListNode = new CommandListNode();
         commandListNode.parse(context);
+    }
+
+    @Override
+    public void draw() {
+        commandListNode.draw();
     }
 
     @Override
