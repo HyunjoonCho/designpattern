@@ -9,19 +9,30 @@ import org.junit.Test;
 
 public class IDCardTest {
     @Test
-    public void idCardTest() {
-        Factory factory = new IDCardFactory();
-        Product card1 = factory.create("John", 111);
+    public void factoryTest() {
+        Factory factory = IDCardFactory.getSingleton();
         Product card2 = factory.create("tlwpdus", 222);
-        Product card3 = factory.create("Mo", 333);
         Product card4 = factory.create("Gon", 444);
-
-        card1.use(100);
-        card3.use(333);
 
         IDCard tmpCard = (IDCard) card2;
         Assert.assertEquals("tlwpdus", tmpCard.getOwner());
-        IDCardFactory tmpFactory = (IDCardFactory) factory;
-        Assert.assertEquals(tmpFactory.getOwners().get(3), card4);
+        Assert.assertEquals(IDCardFactory.getSingleton().getOwners().get(3), card4);
+    }
+
+    @Test
+    public void cardUsageTest() {
+        Factory factory = IDCardFactory.getSingleton();
+        Product card1 = factory.create("John", 111);
+        Product card3 = factory.create("Mo", 333);
+
+        card1.use(100);
+        card3.use(333);
+    }
+
+    @Test
+    public void singletonTest() {
+        Factory factory = IDCardFactory.getSingleton();
+
+        Assert.assertEquals(factory, IDCardFactory.getSingleton());
     }
 }

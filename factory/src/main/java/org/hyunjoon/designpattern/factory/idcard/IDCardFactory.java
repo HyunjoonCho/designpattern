@@ -6,10 +6,19 @@ import org.hyunjoon.designpattern.factory.framework.Product;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class IDCardFactory extends Factory {
-    private List owners = new ArrayList();
-    private HashMap db = new HashMap();
+    private static IDCardFactory singleton = new IDCardFactory();
+    private List<Product> owners = new ArrayList();
+    private Map db = new HashMap();
+
+    private IDCardFactory() {
+    }
+
+    public static IDCardFactory getSingleton() {
+        return singleton;
+    }
 
     public Product createProduct(String owner, int code) {
         db.put(owner, code);
@@ -20,7 +29,7 @@ public class IDCardFactory extends Factory {
         owners.add(p);
     }
 
-    public List getOwners() {
+    public List<Product> getOwners() {
         return owners;
     }
 }
